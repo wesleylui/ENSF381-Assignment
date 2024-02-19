@@ -6,7 +6,7 @@ header {
   display: flex;
   justify-content: space-around;
   width: 100%;
-  align-items: center;
+  flex-direction: row;
 }
 
 h1 {
@@ -16,18 +16,20 @@ h1 {
 }
 
 .navigation-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   background-color: #333;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.navigation-links a {
   color: white;
   text-decoration: none;
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  a {
-    color: white;
-    text-decoration: none;
-    padding-top: 10px;
-    padding-bottom: 20px;
-  }
+
 }
 
 footer {
