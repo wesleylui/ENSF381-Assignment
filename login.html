@@ -17,30 +17,17 @@
             <a href="index.html">Home</a>
             <a href="products.html">Product</a>
             <a href="contact.html">Contacts</a>   
-            <a href="login.html">Login page</a>
+            <a href="login.html">Login</a>
         </div>
         <main>
-            <form>
-                <br>
-                <hr>
-                <br>
-                <a>No account? Sign up <a href="signup.html">here</a>
-                <table>
-                    <tr>
-                    </tr>
-                    <tr>
-                        <th><label for="username">Username:</label></th>
-                        <td><input type="text", id="username", name="username", placeholder="Enter your username" required></td>
-                    </tr>
-                    <tr>
-                        <th><label for="password">Password:</label></th>
-                        <td><input type="password", id="password", name="password", placeholder="Enter your password" required></td>
-                    </tr>
-                </table>
-                <button type="Login">Login</button>  
+            <form class="login-form">
+                    <label for="username">Username:</label>
+                    <input type="text", id="username", name="username", placeholder="Enter your username" required>
+                    <label for="password">Password:</label>
+                    <input type="password", id="password", name="password", placeholder="Enter your password" required>
+                    <button type="Login" class="login-button">Login</button>  
+                    <p>Don't have an account? <a href="signup.html"> Sign up here</a></p>
             </form>
-            <br>
-            <hr>
         </main>
     </body>
     <footer>&copy Copyright, Marcus Lieu, Wesley Lui</footer>

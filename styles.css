@@ -10,6 +10,7 @@ header {
   justify-content: space-around;
   width: 100%;
   flex-direction: row;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -30,6 +31,7 @@ h1 {
   padding-right: 20px;
 }
 .navigation-links a {
+  font-family:Arial, Helvetica, sans-serif;
   color: white;
   text-decoration: none;
 
@@ -39,6 +41,86 @@ footer {
   background-color: #333;
   padding: 10px;
   margin: 0;
+  font-family:Arial, Helvetica, sans-serif;
   color: white;
   text-align: center;
+}
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  background-color: #ddd;
+  padding: 20px;
+  margin: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.shop-now button{
+  background-color: #4CAF50;
+  padding:10px;
+  margin: 20px;
+  border-radius: 10px;
+  border: none;
+}
+
+.shop-now a {
+  font-family:Arial, Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.customer-reviews {
+  display: flex;
+  background-color: #ddd;
+  padding: 20px 20px 20px 20px;
+  margin: 20px;
+  flex-direction: column;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ddd;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+
+.login-form label {
+  margin: 10px;
+}
+
+.login-form input {
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+
+.login-button {
+  background-color: #4CAF50;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  opacity: 0.5;
+  border: none;
+}
+
+.login-button:hover {
+  background-color: #45A049;
+  opacity: 1.0;
+}
+
+.login-form a {
+  margin: 10px;
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
 }
