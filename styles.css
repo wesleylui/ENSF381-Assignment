@@ -124,3 +124,51 @@ footer {
 .login-form a:hover {
   text-decoration: underline;
 }
+
+.contact-information {
+  display: flex;
+  flex-direction: column;
+  background-color: #ddd;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.contact-method {
+  background-color: #ddd;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 10px;
+}
+
+.contact-link {
+  text-decoration: none;
+}
+.contact-link:hover {
+  color: #007BFF;
+  text-decoration: underline;
+}
+
+.contact-information button {
+  color: #fff;
+  background-color: #4CAF50;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+}
+
+.contact-information button:hover {
+  background-color: #45A049;
+}
+
+.contact-information textarea {
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-information input {
+  border: none;
+  border-radius: 5px;
+}
