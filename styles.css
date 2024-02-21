@@ -1,4 +1,4 @@
-/*index.html*/
+/* for all pages */
 body {
   margin: 0;
 }
@@ -45,6 +45,7 @@ footer {
   color: white;
   text-align: center;
 }
+/* home page */
 
 .about-us {
   display: flex;
@@ -77,7 +78,7 @@ footer {
   flex-direction: column;
   font-family:Arial, Helvetica, sans-serif;
 }
-
+/* login page */
 .login-form {
   display: flex;
   flex-direction: column;
@@ -86,6 +87,7 @@ footer {
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 
@@ -125,6 +127,7 @@ footer {
   text-decoration: underline;
 }
 
+/* contact page */
 .contact-information {
   display: flex;
   flex-direction: column;
@@ -171,4 +174,49 @@ footer {
 .contact-information input {
   border: none;
   border-radius: 5px;
+}
+ /* product page */
+.product-list {
+  display: flex;
+  justify-content: center;
+  border-spacing: 50px;
+  background-color: #ddd;
+  padding: 20px;
+  margin: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.product-list th {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.product-list th:hover {
+  background-color: #fff;
+}
+
+.product-list img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.price-tag {
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.product-list button {
+  background-color: #4CAF50;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  border: none;
+  color: #fff;
+}
+
+.product-list button:hover {
+  background-color: #45A049;
 }
