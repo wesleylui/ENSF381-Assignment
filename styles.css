@@ -213,12 +213,12 @@ footer {
 }
 
 .product-list button {
-  background-color: #4CAF50;
   padding: 10px;
   border-radius: 5px;
   margin: 10px;
   border: none;
-  color: #fff;
+  color: white;
+  background-color: #4CAF50;
 }
 
 .product-list button:hover {
