@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LeShop</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="description" content="A comprehensive HTML example with various tags"/>
+        <meta name="Wesley, Marcus" content="Wesley, Marcus" />
+        <link rel="stylesheet" href="styles.css">
+        <link rel="shortcut icon" href="logo/png/logo-color.png" type="image/x-icon" />
+    </head>
+    <body>
+        <header>
+            <div class="header-container">
+                <img src="logo\png\logo-no-background.png" alt="Logo" height="50" class="logo">
+            </div>
+            <h1>LeShop</h1>
+        </header>
+        <div class="navigation-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Product</a>
+            <a href="contact.html">Contacts</a>   
+            <a href="login.html">Login</a>
+        </div>
+
+        <main>
+            <form class="login-form">
+                    <label for="username">Username:</label>
+                    <input type="text", id="username", name="username", placeholder="Enter your username" required>
+                    <label for="password">Password:</label>
+                    <input type="password", id="password", name="password", placeholder="Enter your password" required>
+                    <label for="password">Confirm Password:</label>
+                    <input type="password", id="password", name="password", placeholder="Confirm your password" required>
+                    <label for="email">Email:</label>
+                    <input type="email", id="email", name="email", placeholder="Enter your email" required>
+                    <button type="signup" class="signup-button" onclick="fetchData()">Signup</button>
+            </form>
+
+            <section class="error-messages">
+                <p id="error-message"></p>
+            </section>
+        </main>
+
+    </body>
+
+</html>

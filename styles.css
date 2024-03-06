@@ -224,3 +224,27 @@ footer {
 .product-list button:hover {
   background-color: #45A049;
 }
+
+/* signup page */
+.signup-button {
+  background-color: #4CAF50;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  opacity: 0.5;
+  border: none;
+}
+
+.signup-button:hover {
+  background-color: #45A049;
+  opacity: 1.0;
+}
+
+.error-messages {
+  display: flex;
+  background-color: #ddd;
+  padding: 20px 20px 20px 20px;
+  margin: 20px;
+  flex-direction: column;
+  font-family:Arial, Helvetica, sans-serif;
+}
