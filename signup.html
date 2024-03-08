@@ -26,21 +26,34 @@
         <main>
             <form class="login-form">
                     <label for="username">Username:</label>
-                    <input type="text", id="username", name="username", placeholder="Enter your username" required>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required minlength="3" maxlength="20" pattern="[A-Za-z][A-Za-z0-9-_]+">
                     <label for="password">Password:</label>
-                    <input type="password", id="password", name="password", placeholder="Enter your password" required>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required minlength="8" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()-_=+\[\]{}|;:',.<>?/`~])(?!.*\s).{8,}">
                     <label for="password">Confirm Password:</label>
-                    <input type="password", id="password", name="password", placeholder="Confirm your password" required>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                    
                     <label for="email">Email:</label>
-                    <input type="email", id="email", name="email", placeholder="Enter your email" required>
-                    <button type="signup" class="signup-button" onclick="fetchData()">Signup</button>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required pattern="(?!.*\s)">
+                    <button type="signup" class="signup-button">Signup</button>
             </form>
 
-            <section class="error-messages">
+            <div class="error-messages">
                 <p id="error-message"></p>
-            </section>
+            </div>
         </main>
 
-    </body>
+        <script>
+            const passwordInput = document.getElementById('password');
+            const confirmPasswordInput = document.getElementById('confirm-password');
+            confirmPasswordInput.addEventListener('input', () => {
+                if (confirmPasswordInput.value !== passwordInput.value) {
+                    confirmPasswordInput.setCustomValidity('Passwords do not match');
+                } else {
+                    confirmPasswordInput.setCustomValidity('');
+                }
+            });
+        </script>
 
+    </body>
+    <footer>&copy Copyright, Marcus Lieu, Wesley Lui</footer>
 </html>
