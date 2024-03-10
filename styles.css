@@ -255,3 +255,25 @@ footer {
   margin: 20px;
   font-family:Arial, Helvetica, sans-serif;
 }
+
+#shopping-cart {
+  display: flex;
+  flex-direction: column;
+  background-color: #ddd;
+  justify-content: center;
+  text-align: center;
+  font-weight: bold;
+
+}
+
+.cart-item {
+  padding: 10px;
+}
+
+#shopping-cart button {
+  background-color: #575a5d;
+}
+
+#shopping-cart button:hover {
+  background-color: rgb(223, 21, 21);
+}
