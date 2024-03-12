@@ -10,7 +10,7 @@ header {
   justify-content: space-around;
   width: 100%;
   flex-direction: row;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -31,17 +31,16 @@ h1 {
   padding-right: 20px;
 }
 .navigation-links a {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
   text-decoration: none;
-
 }
 
 footer {
   background-color: #333;
   padding: 10px;
   margin: 0;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
   text-align: center;
 }
@@ -53,23 +52,23 @@ footer {
   background-color: #ddd;
   padding: 20px;
   margin: 20px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.shop-now button{
-  background-color: #4CAF50;
-  padding:10px;
+.shop-now button {
+  background-color: #4caf50;
+  padding: 10px;
   margin: 20px;
   border-radius: 10px;
   border: none;
 }
 
 .shop-now button:hover {
-  background-color: #45A049;
+  background-color: #45a049;
 }
 
 .shop-now a {
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
@@ -80,7 +79,7 @@ footer {
   padding: 20px 20px 20px 20px;
   margin: 20px;
   flex-direction: column;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 /* login page */
 .login-form {
@@ -91,9 +90,8 @@ footer {
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
 
 .login-form label {
   margin: 10px;
@@ -110,7 +108,7 @@ footer {
 }
 
 .login-button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   padding: 10px;
   border-radius: 5px;
   margin: 10px;
@@ -119,13 +117,13 @@ footer {
 }
 
 .login-button:hover {
-  background-color: #45A049;
-  opacity: 1.0;
+  background-color: #45a049;
+  opacity: 1;
 }
 
 .login-form a {
   margin: 10px;
-  color: #007BFF;
+  color: #007bff;
   text-decoration: none;
 }
 
@@ -148,7 +146,7 @@ footer {
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .contact-method {
@@ -162,20 +160,20 @@ footer {
   text-decoration: none;
 }
 .contact-link:hover {
-  color: #007BFF;
+  color: #007bff;
   text-decoration: underline;
 }
 
 .contact-information button {
   color: #fff;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   border-radius: 5px;
   border: none;
   padding: 5px;
 }
 
 .contact-information button:hover {
-  background-color: #45A049;
+  background-color: #45a049;
 }
 
 .contact-information textarea {
@@ -188,7 +186,7 @@ footer {
   border: none;
   border-radius: 5px;
 }
- /* product page */
+/* product page */
 .product-list {
   display: flex;
   justify-content: center;
@@ -196,7 +194,7 @@ footer {
   background-color: #ddd;
   padding: 20px;
   margin: 20px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .product-list th {
@@ -217,7 +215,7 @@ footer {
 }
 
 .price-tag {
-  color: #007BFF;
+  color: #007bff;
   font-weight: bold;
 }
 
@@ -227,35 +225,11 @@ footer {
   margin: 10px;
   border: none;
   color: white;
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 
 .product-list button:hover {
-  background-color: #45A049;
-}
-
-/* signup page */
-.signup-button {
-  background-color: #4CAF50;
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px;
-  opacity: 0.5;
-  border: none;
-}
-
-.signup-button:hover {
-  background-color: #45A049;
-  opacity: 1.0;
-}
-
-.error-message {
-  display: flex;
-  border: 2px;
-  background-color: #f9f9f9;
-  padding: 10px;
-  margin: 20px;
-  font-family:Arial, Helvetica, sans-serif;
+  background-color: #45a049;
 }
 
 #shopping-cart {
@@ -265,7 +239,6 @@ footer {
   justify-content: center;
   text-align: center;
   font-weight: bold;
-
 }
 
 .cart-item {
@@ -278,4 +251,71 @@ footer {
 
 #shopping-cart button:hover {
   background-color: rgb(223, 21, 21);
+}
+
+/* signup page */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ddd;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.signup-form label {
+  margin: 10px;
+}
+
+.signup-form input {
+  padding: 10px;
+  /* margin: 10px; */
+  background-color: #fff;
+  border-radius: 5px;
+  border: none;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.signup-button {
+  background-color: #4caf50;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  opacity: 0.5;
+  border: none;
+}
+
+.signup-button:hover {
+  background-color: #45a049;
+  opacity: 1;
+}
+
+.error-message {
+  display: flex;
+  direction: column;
+  border: 2px;
+  background-color: #f9f9f9;
+  width: 100%;
+  padding: 10px;
+  margin: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.success-message {
+  display: flex;
+  direction: column;
+  border: 2px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.password-wrapper {
+  display: flex;
+  align-items: center;
 }
