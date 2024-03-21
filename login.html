@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>login</title>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="description" content="A comprehensive HTML example with various tags"/>
-        <meta name="Wesley, Marcus" content="Wesley, Marcus" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles.css">
         <link rel="shortcut icon" href="logo/png/logo-color.png" type="image/x-icon" />
+        <title>login - LeShop</title>
+
     </head>
     <body>
-        <header>
-            <img src="logo\png\logo-no-background.png" alt="Logo" height="50" class="Logo">
-            <h1>LeShop</h1>
-        </header>
-        <div class="navigation-links">
-            <a href="index.html">Home</a>
-            <a href="products.html">Product</a>
-            <a href="contact.html">Contacts</a>   
-            <a href="login.html">Login</a>
-        </div>
-        <main>
-            <div class="login-form">
-                    <label for="username">Username:</label>
-                    <input type="text", id="username", name="username", placeholder="Enter your username" required>
-                    <label for="password">Password:</label>
-                    <input type="password", id="password", name="password", placeholder="Enter your password" required>
-                    <button type="Login" class="login-button" onclick="validateForm()">Login</button>
-                    <p>Don't have an account? <a href="signup.html"> Sign up here</a></p>
+        <header class="header">
+            <div class="logo">
+                <img src="logo\png\logo-no-background.png" alt="Logo">
             </div>
 
-            <div class="login-message">
-                <p class="message" id="login-message"> </p>
+            <div class="company-name">
+                LeShop
             </div>
+        </header>
+        
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="products.html" class="nav-link">Product</a>
+            <a href="contact.html" class="nav-link">Contacts</a>   
+            <a href="login.html" class="nav-link">Login</a>
+        </nav>
+
+        <main>
+            <section class="login-form">    
+                <form action="#" method="post">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                        
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    
+                    <button type="button" class="login-button" onclick="loginUser()">Login</button>
+                    <p>Don't have an account? <a href="signup.html" class="signup-link"> Sign up here</a></p>
+                </form>
+            </section>
+                <script src="login.js"></script>
         </main>
 
-        <script src="login.js"></script>
-        
+        <footer>&copy; Copyright, Marcus Lieu, Wesley Lui</footer>
 
     </body>
-    <footer>&copy Copyright, Marcus Lieu, Wesley Lui</footer>
 </html>

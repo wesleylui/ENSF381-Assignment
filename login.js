@@ -1,24 +1,46 @@
-async function validateForm(event) {
-    const response = await fetch('https://jsonplaceholder.typicode.com/users');
-    const users = await response.json(); // JSON array of all users
-    //get username and password from text fields
-    const usernameInput = document.getElementById("username").value;
-    const passwordInput = document.getElementById("password").value;
+function loginUser() {
+    // Get the entered username and password from the form
+    const usernameInput = document.getElementById('username').value;
+    const useremailInput = document.getElementById('password').value;
 
-    let userFound = false;
-
-    for (const user of users) {
-        if (user.username === usernameInput) {
-            userFound = true;
-            if(user.email === passwordInput){
-                document.getElementById("login-message").textContent = "Login successful!";
-            } else {
-                document.getElementById("login-message").textContent = "Invalid password. Please try again";
+    // Make API call to fetch user data
+    fetch('https://jsonplaceholder.typicode.com/users')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Failed to fetch user data from API.');
             }
-            break; //no need to continue loop if user is found
-        }
+            return response.json();
+        })
+        .then(users => {
+            const user = users.find(user => user.username === usernameInput && user.email === useremailInput);
+
+            if (user) {
+                displayMessage('success', 'Login successful!');
+            } else {
+                displayMessage('error', 'Invalid username or useremail. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching user data:', error);
+            displayMessage('error', 'An error occurred while fetching user data. Please try again later.');
+        });
+}
+
+function displayMessage(type, message) {
+    // Check if message box already exists
+    let messageBox = document.querySelector('.message-box');
+
+    if (!messageBox) {
+        messageBox = document.createElement('div');
+        messageBox.classList.add('message-box');
+
+        const mainSection = document.querySelector('main');
+        mainSection.appendChild(messageBox);
     }
-    if(!userFound) {
-        document.getElementById("login-message").textContent = "Invalid username. Please try again";
-    }
+
+    const messagePara = document.createElement('p');
+    messagePara.textContent = message;
+
+    messageBox.innerHTML = '';
+    messageBox.appendChild(messagePara);
 }

@@ -1,37 +1,37 @@
 /* for all pages */
 body {
   margin: 0;
+  font-family: Arial, sans-serif;
 }
-header {
+
+/* Header */
+.header {
   background-color: #333;
   padding: 20px;
-  margin: 0;
   display: flex;
-  justify-content: space-around;
-  width: 100%;
-  flex-direction: row;
-  font-family: Arial, Helvetica, sans-serif;
+  justify-content: space-between;
+  align-items: center;
 }
 
-h1 {
+.logo img {
+  max-height: 50px;
+}
+
+.company-name {
   color: white;
   font-size: 2em;
-  margin: 0;
 }
 
-.navigation-links {
+/*navigation links*/
+nav {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  background-color: #333;
+  justify-content: space-between;
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  background-color: #333;
 }
-.navigation-links a {
-  font-family: Arial, Helvetica, sans-serif;
+
+.nav-link {
+  padding: 10px 20px;
   color: white;
   text-decoration: none;
 }
@@ -81,7 +81,10 @@ footer {
   flex-direction: column;
   font-family: Arial, Helvetica, sans-serif;
 }
-/* login page */
+
+/*---------------------------------------------------------*/
+
+/* Login Form Section Styles */
 .login-form {
   display: flex;
   flex-direction: column;
@@ -90,53 +93,59 @@ footer {
   padding: 20px;
   margin: 20px;
   border-radius: 10px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
-.login-form label {
+/* Form Field Styles */
+form label {
+  display: block;
   margin: 10px;
 }
 
-.login-form input {
-  padding: 10px;
-  margin: 10px;
+form input {
   background-color: #fff;
-  border-radius: 5px;
-  border: none;
-  border: 2px solid black;
+  padding: 10px;
+  margin: 10px;
   border-radius: 5px;
 }
 
+/* Login Button Styles */
 .login-button {
-  background-color: #4caf50;
+  background-color: #4CAF50;
+  color: white;
   padding: 10px;
+  border: none;
   border-radius: 5px;
   margin: 10px;
-  opacity: 0.5;
-  border: none;
+  cursor: pointer;
+  opacity: .5
 }
 
 .login-button:hover {
-  background-color: #45a049;
-  opacity: 1;
+  background-color: #45A049;
+  opacity: 1.0
 }
 
-.login-form a {
-  margin: 10px;
-  color: #007bff;
-  text-decoration: none;
-}
-
-.login-form a:hover {
-  text-decoration: underline;
-}
-
-.login-message {
-  border: 2px;
+/* Message Box Styles */
+.message-box {
+  border: 2px solid;
   background-color: #f9f9f9;
   padding: 10px;
   margin: 20px;
 }
+
+
+/* Signup Link Styles */
+.signup-link {
+  color: #007BFF;
+  text-decoration: none;
+  margin: 10px;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/*---------------------------------------------------------*/
 
 /* contact page */
 .contact-information {
@@ -264,7 +273,6 @@ footer {
   border-radius: 10px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 
 .signup-form label {
   margin: 10px;
