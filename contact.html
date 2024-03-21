@@ -1,57 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>contact</title>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="description" content="A comprehensive HTML example with various tags"/>
-        <meta name="Wesley, Marcus" content="Wesley, Marcus" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles.css">
         <link rel="shortcut icon" href="logo/png/logo-color.png" type="image/x-icon" />
+        <title>contact - LeShop</title>
     </head>
     <body>
-        <header>
-            <img src="logo\png\logo-no-background.png" alt="Logo" height="50" class="Logo">
-            <h1>LeShop</h1>
-        </header>
-        <div class="navigation-links">
-            <a href="index.html">Home</a>
-            <a href="products.html">Product</a>
-            <a href="contact.html">Contacts</a>   
-            <a href="login.html">Login</a>
-        </div>
-        <br>
-        <main class="contact-information">
-            <h2>Reach Out to Us</h2>
-            <a>We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to contact us through any of the channels below:</a>
-            
-            <div class="contact-method">
-                <b><p>Email</p></b>
-                <p>Email us at: <b>customer.support@leshop.com</b></p>
-                <b><p>Phone:</p></b>
-                <p>Call us at: <b>123-456-7890</b></p>
-                <b><p>Social Media:</p></b>
-                <p><a href="https://instagram.com" class="contact-link">Instagram</a></p>
-                <p><a href="https://twitter.com" class="contact-link"> Twitter</a></p>
-                <p><a href="https://facebook.com" class="contact-link">Facebook</a></p>
-                <b><p>Direct contact:</p></b>
-                <a>Send direct message to customer support:</a>
-                <form>
-                    <label for="name"></label>
-                    <br>
-                    <input type="text", id="name" name="username" placeholder="Enter name">
-                    <br>
-                    <label for="message"></label>
-                    <br>
-                    <textarea id="message", name="message" rows="8", placeholder="Enter message to customer support"></textarea>
-                    <br>
-                    <button>Submit</button>
-                </form> 
+        <header class="header">
+            <div class="logo">
+                <img src="logo\png\logo-no-background.png" alt="Logo">
             </div>
+            <div class="company-name">
+                LeShop
+            </div>
+        </header>
 
+        <nav class="navigation-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="products.html" class="nav-link">Product</a>
+            <a href="contact.html" class="nav-link">Contacts</a>   
+            <a href="login.html" class="nav-link">Login</a>
+        </nav>
+        
+        <main>
+            <section class="contact-information">
+                <h2>Reach Out to Us</h2>
+                <p>We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to contact us through any of the channels below:</p>
+                
+                <div class="contact-method">
+                    <h3>Email</h3>
+                    <p>
+                        Email us at: <a href="mailto:customer.support@leshop.com">customer.support@leshop.com</a>
+                    </p>
+                </div>
+
+                <div class="contact-method">
+                    <h3>Phone</h3>
+                    <p>Call us at: <b>123-456-7890</b></p>
+                </div>
+
+                <div class="contact-method">
+                    <h3>Social Media</h3>
+                    <p>Connect with us on social media:</p>
+                    <ul>
+                        <li><a href="https://instagram.com">Instagram</a></li>
+                        <li><a href="https://twitter.com">Twitter</a></li>
+                        <li><a href="https://facebook.com">Facebook</a></li>
+                    </ul>
+                </div>
+
+                <div class="contact-method">
+                    <h3>Direct Contact:</h3>
+                    <a>Send direct message to customer support:</a>
+                    <form>
+                        <label for="name"></label>
+                        <input type="text", id="name" name="username" placeholder="Enter name">
+                        <label for="message"></label>
+                        <textarea id="message", name="message" rows="8", placeholder="Enter message to customer support"></textarea>
+                        <br>
+                        <button>Submit</button>
+                    </form> 
+                </div>
+            </section>
         </main>
-        <br>
-        <hr>
+
+    <footer>&copy; Copyright, Marcus Lieu, Wesley Lui</footer>
     </body>
-    <footer>Copyright, Marcus Lieu, Wesley Lui</footer>
 </html>
