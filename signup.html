@@ -1,133 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>LeShop</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta
-      name="description"
-      content="A comprehensive HTML example with various tags"
-    />
-    <meta name="Wesley, Marcus" content="Wesley, Marcus" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="shortcut icon"
       href="logo/png/logo-color.png"
       type="image/x-icon"
     />
+    <script src="signup.js"></script>
+    <title>signup - LeShop</title>
   </head>
+
   <body>
-    <header>
-      <div class="header-container">
-        <img
-          src="logo\png\logo-no-background.png"
-          alt="Logo"
-          height="50"
-          class="logo"
-        />
+    <header class="header">
+      <div class="logo">
+        <img src="logo\png\logo-no-background.png" alt="Logo" />
       </div>
-      <h1>LeShop</h1>
+      <div class="company-name">LeShop</div>
     </header>
-    <div class="navigation-links">
-      <a href="index.html">Home</a>
-      <a href="products.html">Product</a>
-      <a href="contact.html">Contacts</a>
-      <a href="login.html">Login</a>
-    </div>
+
+    <nav class="navigation-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="products.html" class="nav-link">Products</a>
+      <a href="contact.html" class="nav-link">Contacts</a>
+      <a href="login.html" class="nav-link">Login</a>
+    </nav>
 
     <main>
-        <section class="signup-form">
-            <form class="signup-form" onsubmit="return validateSignup(event)">
-                <label for="username">Username:</label> <br>
-                <input class="form" type="text" id="username" name="username" placeholder="Enter your username" required>
-                <br>
-                <label for="password">Password:</label>
-                <input class='form' type="password" id="password" name="password" placeholder="Enter your password" required>
-                <br>
-                <label for="confirmPassword">Confirm Password:</label>
-                <input class='form' type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required>
-                <br>
-                <label for="email">Email:</label>
-                <div class="password-wrapper">
-                    <input class="form" type="text" id="email" name="email" placeholder="Enter your email" required>
-                    <button type="submit" class="signup-button">Signup</button>
-                </div>
-            </form>
-        </section>
-        <div id="messageBox" class="message-box">
-            <p id="errorMessage" class="error-message"></p>
-        </div>
-        <div id="successMessage" class="message-box"></div> 
+      <section class="signup-form">
+        <form class="signup-form" onsubmit="return validateSignup(event)">
+          <label for="username">Username:</label> <br />
+          <input
+            class="form"
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Enter your username"
+            required
+          />
+          <br />
+          <label for="password">Password:</label>
+          <input
+            class="form"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            required
+          />
+          <br />
+          <label for="confirmPassword">Confirm Password:</label>
+          <input
+            class="form"
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Confirm password"
+            required
+          />
+          <br />
+          <label for="email">Email:</label>
+          <div class="password-wrapper">
+            <input
+              class="form"
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <button type="submit" class="signup-button">Signup</button>
+          </div>
+        </form>
+      </section>
+      <div id="messageBox" class="message-box">
+        <p id="errorMessage" class="error-message"></p>
+      </div>
+      <div id="successMessage" class="message-box"></div>
     </main>
 
-    <script>
-      function validateSignup() {
-        event.preventDefault();
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
-        var confirmPassword = document.getElementById("confirmPassword").value;
-        var email = document.getElementById("email").value;
-
-        errorMessage.textContent = "";
-        
-        var errorOccured = false;
-
-        if (!isValidUsername(username)) {
-          displayErrorMessage("Check the Username.");
-          errorOccured = true;
-        }
-
-        if (!isValidPassword(password)) {
-          displayErrorMessage("Invalid password format.");
-          errorOccured = true;
-        }
-
-        if (password !== confirmPassword) {
-          displayErrorMessage("Passwords doesn't match.");
-          errorOccured = true;
-        }
-
-        if (!isValidEmail(email)) {
-          displayErrorMessage("Check the Email.");
-          errorOccured = true;
-        }
-
-        if (errorOccured) {
-          return;
-        }
-        displaySuccessMessage("Signup successful!");
-      }
-
-      function isValidUsername(username) {
-        var usernameRegex = /^[a-zA-Z][a-zA-Z0-9_-]{2,19}$/;
-        return usernameRegex.test(username);
-      }
-
-      function isValidPassword(password) {
-        var passwordRegex =
-          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()-_=+[\]{}|;:'",.<>?/`~])[A-Za-z\d!@#$%^&*()-_=+[\]{}|;:'",.<>?/`~]{8,}$/;
-        return passwordRegex.test(password);
-      }
-
-      function isValidEmail(email) {
-        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailRegex.test(email);
-      }
-
-      function displayErrorMessage(message) {
-        var errorMessage = document.getElementById("errorMessage");
-        var messageBox = document.getElementById("messageBox");
-
-        errorMessage.textContent += (message + "\n");
-      }
-
-      function displaySuccessMessage(message) {
-        var errorMessage = document.getElementById("errorMessage");
-        var messageBox = document.getElementById("messageBox");
-
-        errorMessage.textContent = message;
-      }
-    </script>
+    
   </body>
-  <footer>&copy Copyright, Marcus Lieu, Wesley Lui</footer>
+  <footer>&copy; Copyright, Marcus Lieu, Wesley Lui</footer>
 </html>
