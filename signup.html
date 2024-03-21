@@ -29,58 +29,25 @@
     </nav>
 
     <main>
+      <!-- Signup Form Section -->
       <section class="signup-form">
-        <form class="signup-form" onsubmit="return validateSignup(event)">
-          <label for="username">Username:</label> <br />
-          <input
-            class="form"
-            type="text"
-            id="username"
-            name="username"
-            placeholder="Enter your username"
-            required
-          />
-          <br />
+        <form action="#" id="signup-form" method="post">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" placeholder="Enter username" required>
+
           <label for="password">Password:</label>
-          <input
-            class="form"
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Enter your password"
-            required
-          />
-          <br />
-          <label for="confirmPassword">Confirm Password:</label>
-          <input
-            class="form"
-            type="password"
-            id="confirmPassword"
-            name="confirmPassword"
-            placeholder="Confirm password"
-            required
-          />
-          <br />
+          <input type="password" id="password" name="passowrd" placeholder="Enter password" required>
+
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm password">
+
           <label for="email">Email:</label>
-          <div class="password-wrapper">
-            <input
-              class="form"
-              type="text"
-              id="email"
-              name="email"
-              placeholder="Enter your email"
-              required
-            />
-            <button type="submit" class="signup-button">Signup</button>
-          </div>
+          <input type="email" id="email" name="email" required placeholder="Enter email">
+
+          <button type="button" class="signup-button" onclick="signup()">Signup</button>
         </form>
       </section>
-      <div id="messageBox" class="message-box">
-        <p id="errorMessage" class="error-message"></p>
-      </div>
-      <div id="successMessage" class="message-box"></div>
     </main>
-
     
   </body>
   <footer>&copy; Copyright, Marcus Lieu, Wesley Lui</footer>

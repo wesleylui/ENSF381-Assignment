@@ -1,66 +1,91 @@
-function validateSignup() {
-  event.preventDefault();
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
-  var confirmPassword = document.getElementById("confirmPassword").value;
-  var email = document.getElementById("email").value;
+function signup() {
+  const signupForm = document.getElementById("signup-form");
+  const username = signupForm.elements["username"].value;
+  const password = signupForm.elements["password"].value;
+  const confirmPassword = signupForm.elements["confirm-password"].value;
+  const email = signupForm.elements["email"].value;
 
-  errorMessage.textContent = "";
+  let errorMessage = "";
 
-  var errorOccured = false;
-
-  if (!isValidUsername(username)) {
-    displayErrorMessage("Check the Username.");
-    errorOccured = true;
+  // Validate username
+  if (!validateUsername(username)) {
+    errorMessage += "Username is incorrect.\n";
   }
 
-  if (!isValidPassword(password)) {
-    displayErrorMessage("Invalid password format.");
-    errorOccured = true;
+  // Validate password
+  if (!validatePassword(password)) {
+    errorMessage += "Password is incorrect.\n";
   }
 
+  // Validate confirm password
   if (password !== confirmPassword) {
-    displayErrorMessage("Passwords doesn't match.");
-    errorOccured = true;
+    errorMessage += "Passwords do not match.\n";
   }
 
-  if (!isValidEmail(email)) {
-    displayErrorMessage("Check the Email.");
-    errorOccured = true;
+  // Validate email
+  if (!validateEmail(email)) {
+    errorMessage += "Email is incorrect.\n";
   }
 
-  if (errorOccured) {
-    return;
+  if (errorMessage) {
+    displayMessage("error", errorMessage);
+  } else {
+    displayMessage("success", "Signup successful!");
+    // Reset form
+    signupForm.reset();
   }
-  displaySuccessMessage("Signup successful!");
 }
 
-function isValidUsername(username) {
-  var usernameRegex = /^[a-zA-Z][a-zA-Z0-9_-]{2,19}$/;
-  return usernameRegex.test(username);
+function validateUsername(username) {
+  if (username.length < 3 || username.length > 20) {
+    return false;
+  }
+
+  if (!username.match(/^[a-zA-Z]/)) {
+    return false;
+  }
+  if (!username.match(/^[a-zA-Z0-9-_]+$/)) {
+    return false;
+  }
+
+  return true;
 }
 
-function isValidPassword(password) {
-  var passwordRegex =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()-_=+[\]{}|;:'",.<>?/`~])[A-Za-z\d!@#$%^&*()-_=+[\]{}|;:'",.<>?/`~]{8,}$/;
-  return passwordRegex.test(password);
+function validatePassword(password) {
+  // Must be at least 8 characters long
+  if (password.length < 8) {
+    return false;
+  }
+
+  // Must contain at least one uppercase letter, one lowercase letter, one number, and one special character
+  const hasUpperCase = /[A-Z]/.test(password);
+  const hasLowerCase = /[a-z]/.test(password);
+  const hasNumber = /\d/.test(password);
+  const hasSpecialChar = /[!@#$%^&*()-_=+\[\]{}|;:'",.<>?/`~]/.test(password);
+
+  return hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar;
 }
 
-function isValidEmail(email) {
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-function displayErrorMessage(message) {
-  var errorMessage = document.getElementById("errorMessage");
-  var messageBox = document.getElementById("messageBox");
+function displayMessage(type, message) {
+  // Check if message box already exists
+  let messageBox = document.querySelector(".message-box");
 
-  errorMessage.textContent += message + "\n";
-}
+  if (!messageBox) {
+    messageBox = document.createElement("div");
+    messageBox.classList.add("message-box");
 
-function displaySuccessMessage(message) {
-  var errorMessage = document.getElementById("errorMessage");
-  var messageBox = document.getElementById("messageBox");
+    const mainSection = document.querySelector("main");
+    mainSection.appendChild(messageBox);
+  }
 
-  errorMessage.textContent = message;
+  const messagePara = document.createElement("p");
+  messagePara.textContent = message;
+
+  // Clear existing content and append new message
+  messageBox.innerHTML = "";
+  messageBox.appendChild(messagePara);
 }
